@@ -70,7 +70,7 @@
           `<li class="cu"><b>What it means</b><span>${esc(c.means)}</span></li><li class="cu"><b>In practice</b><span>${esc(c.practice)}</span></li>`))
       : [panel(1, 'Fact / example', t.fact.map(li).join('')), panel(2, 'Why it matters', t.why.map(li).join('')),
          panel(3, 'Question / debate', t.question.map(li).join('')), panel(4, 'Connection', t.connect.map(conn).join(''))];
-    if (t.custom && t.connect.length) panels.push(panel(5, 'Connection', t.connect.map(conn).join('')));
+    if (t.custom && t.connect.length) panels.push(panel(5, esc(t.connectTitle || 'Connection'), t.connect.map(conn).join('')));
     $('#inPanels').innerHTML = panels.join('');
     $('#inIntro').textContent = t.intro || ''; $('#inIntro').hidden = !t.intro;
     $('.legend', inner).hidden = !!t.custom;

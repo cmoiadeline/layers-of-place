@@ -31,8 +31,7 @@ window.SIGNPOST = { lngLat: [66.9811, 39.6614] };
 window.TEAM = [
   { name: "Pages Mark Thomas Frank Mathieu",   role: "[TODO]", photo: "thomas" },
   { name: "Ma Shanshan",                       role: "[TODO]", photo: "mashanshan" },
-  { name: "Sheverdyayeva Mariya Alekseyevna",  role: "[TODO]", photo: "mary" },
-  { name: "Sha [TODO full name]",              role: "[TODO]", photo: "sha" },
+  { name: "Shahafas K A",                      role: "[TODO]", photo: "sha" },
   { name: "Udalova Polina Dmitriyevna",        role: "[TODO]", photo: "polina" },
   { name: "Deng Shuang",                       role: "[TODO]", photo: "dengshuang" },
   { name: "Eliboyeva Mashhura Otabek qizi",    role: "[TODO]", photo: "mashkura" }
@@ -227,7 +226,11 @@ window.TOPICS = {
         practice: "In Uzbekistan, every big joyful event, and even difficult times, involves cooking and sharing osh. Weddings, cradle ceremonies (Beshik to‘yi), and circumcision parties (Sunnat to‘yi) bring all the relatives and neighbors together, making their bonds and love for each other even stronger." }
     ],
     fact: [], why: [], question: [],
+    connectTitle: "Connection and Harmony (Bog‘liqlik va uyg‘unlik)",
     connect: [
+      { text: "Family and community traditions (Hashar, hospitality) shape modern house design: a spacious guest room (mehmonxona) and a summer kitchen or ayvon are kept in modern cottages and apartments." },
+      { text: "National patterns on modern materials: glass-and-metal buildings such as the “Humo Arena” in Tashkent still use ganch plaster carving, national patterns, decorative grills and dome elements." },
+      { text: "The mahalla idea in modern townships: neighbourliness and close bonds (oqibat), shared recreation zones and choyxona tearooms in “smart cities” and gated communities." },
       { to: "registan", text: "The Registan keeps living traditions: national festivals, music shows, and craft workers selling Uzbek ceramics and textiles." }
     ],
     refs: [
@@ -269,7 +272,7 @@ window.PAIR_NOTES = {
   "registan|afrasiyab": "Same centre of power, moved south. UNESCO reads the city in three zones: Afrasiyab (oldest), the Timurid city, the 19th–20th-century western extension.",
   "registan|gur": "Same Timurid-era city. Learning and public life on the Registan; family burial at Gur-e-Amir. Ulugh Beg links the two.",
   "registan|modern": "The Registan is inside the World Heritage zone, so new hotels and halls nearby must follow strict height and style rules. It marks the boundary between old and new Samarkand: modern city planning has to fit this historic layer, and new buildings must respect the heritage site. Since the 1950s the square has also become a visitor product: pedestrian streets, tickets, festivals.",
-  "registan|traditions": "The Registan no longer holds old classes or medieval markets. Today it hosts national festivals, music shows and light performances, and local craft workers sell Uzbek ceramics and textiles here. The old space carries modern local customs: the historic square keeps living traditions and gets new use from today’s local people.",
+  "registan|traditions": "Registan serves as the main venue for Uzbek cultural gatherings and welcomes visitors from all over the world, carrying forward this age-old tradition of hospitality. It no longer holds old classes or medieval markets. Today it hosts national festivals, music shows and light performances, and local craft workers sell Uzbek ceramics and textiles here. The old space carries modern local customs: the historic square keeps living traditions and gets new use from today’s local people.",
   "gur|modern": "Planned entrance plaza and visitor centre: a tomb redesigned for visitors.",
   "afrasiyab|modern": "A road cut through Afrasiyab in 1965; UNESCO asked about the same road in 2006 and 2008."
   /* Add more as "a|b": "text" — keys use the order registan, gur, afrasiyab, modern, traditions */
