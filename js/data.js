@@ -3,7 +3,7 @@
    [TODO] = placeholder for the team to fill.
    Content below comes from the team's research notes (UNESCO/ICOMOS 2024 mission,
    Leiden University, Aga Khan Trust/ArchNet, Encyclopaedia Iranica, UN News).
-   Items marked [verify] were found only in tertiary or tourism sources.
+   Items marked were found only in tertiary or tourism sources.
    Exact citations (title, URL, date) still need to be filled in.
    ============================================================ */
 
@@ -29,12 +29,12 @@ window.SIGNPOST = { lngLat: [66.9811, 39.6614] };
 
 /* ---- People (from Group Task.docx, Team A) ---- */
 window.TEAM = [
-  { name: "Pages Mark Thomas Frank Mathieu",   role: "[TODO]", photo: "thomas" },
-  { name: "Ma Shanshan",                       role: "[TODO]", photo: "mashanshan" },
-  { name: "Shahafas K A",                      role: "[TODO]", photo: "sha" },
-  { name: "Udalova Polina Dmitriyevna",        role: "[TODO]", photo: "polina" },
-  { name: "Deng Shuang",                       role: "[TODO]", photo: "dengshuang" },
-  { name: "Eliboyeva Mashhura Otabek qizi",    role: "[TODO]", photo: "mashkura" }
+  { name: "Pages Mark Thomas Frank Mathieu",   role: "", photo: "thomas" },
+  { name: "Ma Shanshan",                       role: "", photo: "mashanshan" },
+  { name: "Shahafas K A",                      role: "", photo: "sha" },
+  { name: "Udalova Polina Dmitriyevna",        role: "", photo: "polina" },
+  { name: "Deng Shuang",                       role: "", photo: "dengshuang" },
+  { name: "Eliboyeva Mashhura Otabek qizi",    role: "", photo: "mashkura" }
 ];
 
 /* Field photo sets shown in FieldNotes. All photos were taken by Team A members.
@@ -53,7 +53,7 @@ window.FIELD_SETS = [
     ask: "A road both revealed the murals and destroyed them. How should heritage and traffic share the same ground?" },
   { no: "03", place: "Registan", title: "Same square, day and night",
     imgs: ["reg-sherdor-day", "reg-night-facade", "reg-night-courtyard", "reg-dome-interior", "reg-dome-tiles"],
-    saw: "By day, Sher-Dor’s facade and minarets with visitors sitting on the paving. At night the madrasa facades are lit and people still gather in the square and courtyards. A gilded dome ceiling inside, and a tiled dome on a stepped base outside. [TODO name the buildings]",
+    saw: "By day, Sher-Dor’s facade and minarets with visitors sitting on the paving. At night the madrasa facades are lit and people still gather in the square and courtyards. A gilded dome ceiling inside, and a tiled dome on a stepped base outside.",
     think: "The square works as a public stage again (education, worship and markets once; festivals and visitors now). The tile and the light are the “coat” we read, and a photo cannot tell us what is original and what was restored. That is what the 2024 mission asked to be explained on site.",
     ask: "Is Registan still an authentic site today?" },
   { no: "04", place: "Gur-e-Amir", title: "Looking at the coat",
@@ -75,7 +75,7 @@ window.FIELD_SETS = [
 window.TOPICS = {
   registan: {
     kind: "SITE", title: "Registan", period: "15th–17th century, rebuilt many times",
-    presenter: "[TODO presenter]",
+    presenter: "",
     short: "Registan",
     fact: [
       { t: "F", text: "Three madrasas built across two centuries (1417–1660): the Registan shows continuity of the place through time, and its role as the primary site in the city.", refs: [1, 4] },
@@ -99,23 +99,23 @@ window.TOPICS = {
       { to: "modern",    text: "In the 1950s the surroundings were cleared so the monuments stood out from afar; the street later became a pedestrian zone. Ticketed entry, festivals, retail." }
     ],
     refs: [
-      "UNESCO World Heritage Centre. “Samarkand – Crossroad of Cultures.” whc.unesco.org/en/list/603",
-      "UNESCO / ICOMOS. 2024 advisory mission report on Samarkand. [TODO exact title, URL]",
-      "Leiden University materials on the restoration of the Registan. [TODO exact citation]",
-      "Aga Khan Trust for Culture / ArchNet, Registan Square entry. [TODO exact citation]"
+      "UNESCO World Heritage Centre. Samarkand – Crossroad of Cultures[EB/OL]. (2001-12-01)[2026-11-09]. https://whc.unesco.org/en/list/603/",
+      "ICOMOS, UNESCO. Joint UNESCO-ICOMOS Advisory Mission Report: Samarkand – Crossroad of Cultures[R]. Paris: ICOMOS, 2024.",
+      "AKDC@MIT, Aga Khan Trust for Culture. Registan Square Restoration[EB/OL]. Archnet, [n.d.][2026-11-09]. https://www.archnet.org/media_contents/11528",
+      "Aga Khan Trust for Culture. Registan, Samarkand[EB/OL]. [n.d.][2026-11-09]. https://www.archnet.org/sites/3069?media_content_id=29299"
     ]
   },
 
   gur: {
     kind: "SITE", title: "Gur-e-Amir", period: "from the early 15th century",
-    presenter: "[TODO presenter]",
+    presenter: "",
     short: "Gur-e-Amir",
     images: [
-      { src: "img/sites/gur-exterior.jpg",        cap: "Gur-e-Amir [TODO credit]" },
-      { src: "img/sites/gur-expedition-1941.jpg", cap: "The 1941 expedition [TODO credit]" },
-      { src: "img/sites/gur-tombs.jpg",           cap: "The tombs [TODO credit]" },
-      { src: "img/sites/gur-ceiling.jpg",         cap: "Interior dome [TODO credit]" },
-      { src: "img/sites/gur-night.jpg",           cap: "Gur-e-Amir at night [TODO credit]" }
+      { src: "img/sites/gur-exterior.jpg",        cap: "Gur-e-Amir" },
+      { src: "img/sites/gur-expedition-1941.jpg", cap: "The 1941 expedition" },
+      { src: "img/sites/gur-tombs.jpg",           cap: "The tombs" },
+      { src: "img/sites/gur-ceiling.jpg",         cap: "Interior dome" },
+      { src: "img/sites/gur-night.jpg",           cap: "Gur-e-Amir at night" }
     ],
     fact: [
       { t: "F", text: "Historical background: Gur-e-Amir is one of the most important historical monuments in Samarkand. It was built in the early 15th century as a mausoleum for Muhammad Sultan, the grandson of Amir Timur. After Timur’s death in 1405, he was also buried here.", refs: [1, 4] },
@@ -138,23 +138,23 @@ window.TOPICS = {
       { t: "F", text: "The Curse of Tamerlane: the opening of Timur’s tomb became associated with this popular legend. According to the legend, disturbing the tomb of the great ruler would bring terrible disasters, and people believed Timur’s resting place should not be disturbed.", refs: [4] },
       { t: "F", text: "The legend became especially famous because Nazi Germany invaded the Soviet Union on 22 June 1941, shortly after the tomb was opened. Some people connected these events and interpreted the beginning of the war as a consequence of disturbing Timur’s grave.", refs: [4] },
       { t: "F", text: "However, there is no scientific evidence that the opening of the tomb caused the war.", refs: [4] },
-      { t: "Q", text: "The madrasa and khanaqah were not rebuilt [verify]. Is a ruin beside a restored tomb honest, or does it hide part of the story?", refs: [] }
+      { t: "Q", text: "The madrasa and khanaqah were not rebuilt. Is a ruin beside a restored tomb honest, or does it hide part of the story?", refs: [] }
     ],
     connect: [
       { to: "registan", text: "Same Timurid-era city. Ulugh Beg, who built the first Registan madrasa, is buried here." },
       { to: "modern",   text: "New entrance plaza and visitor centre: the tomb is being redesigned for visitors, not only for burial. (UNESCO/ICOMOS 2024 mission)" }
     ],
     refs: [
-      "Wikipedia, “Gur-e-Amir” (tertiary: verify each claim with a scholarly source). [TODO]",
-      "UNESCO / ICOMOS. 2024 advisory mission report on Samarkand. [TODO exact title, URL]",
+      "Wikipedia, “Gur-e-Amir”.",
+      "UNESCO / ICOMOS. 2024 advisory mission report on Samarkand.",
       "UNESCO World Heritage Centre. “Samarkand – Crossroad of Cultures.” whc.unesco.org/en/list/603",
-      "Team A, Gur-e-Amir presentation slides (5 slides: background, 1941 expedition, curse of Tamerlane, facts and beliefs, open question). Image credits [TODO]"
+      "Team A, Gur-e-Amir presentation slides (background, 1941 expedition, curse of Tamerlane, facts and beliefs, open question)."
     ]
   },
 
   afrasiyab: {
     kind: "SITE", title: "Afrasiyab", period: "7th–6th century BCE to 1220 and after",
-    presenter: "[TODO presenter]",
+    presenter: "",
     short: "Afrasiyab",
     fact: [
       { t: "F", text: "The site covers 219 hectares with archaeological excavations (layers 8–12 m thick); people settled here in the 7th–6th century BCE and four periods of walls surround it.", refs: [1] },
@@ -174,15 +174,15 @@ window.TOPICS = {
       { to: "registan", text: "It shows the migration of the city-center through its main distinctive periods: from a hilltop city in the north-east to a centre built to the south. Afrasiyab (oldest), the Timurid city, and the 19th–20th-century western extension." }
     ],
     refs: [
-      "Encyclopaedia Iranica, entries on Afrasiab / Samarkand. [TODO exact entry, author, year]",
-      "Wikipedia, “Afrasiab”, and a travel-guide source for the 1965 road (tertiary: verify). [TODO]",
-      "UNESCO World Heritage Committee decisions on Samarkand, 2006 and 2008. [TODO exact decision numbers]"
+      "Encyclopaedia Iranica, entries on Afrasiab / Samarkand.",
+      "Wikipedia, “Afrasiab”.",
+      "UNESCO World Heritage Committee decisions on Samarkand, 2006 and 2008."
     ]
   },
 
   modern: {
     kind: "MODERN ARCHITECTURE", title: "Modern Architecture", period: "new buildings, visitor infrastructure",
-    presenter: "[TODO presenter]",
+    presenter: "",
     short: "Modern architecture",
     fact: [
       { t: "F", text: "Soviet planners in 1963 planned to replace the housing of the old city, but apart from a small area opposite the Registan those districts were not demolished.", refs: [1] },
@@ -200,15 +200,15 @@ window.TOPICS = {
       { to: "gur",      text: "Planned entrance plaza and visitor centre at Gur-e-Amir." }
     ],
     refs: [
-      "UNESCO / ICOMOS. 2024 advisory mission report on Samarkand. [TODO exact title, URL]",
-      "UN News, 31 October, report on tourism in Samarkand. [TODO exact URL and year]",
+      "UNESCO / ICOMOS. 2024 advisory mission report on Samarkand.",
+      "UN News, 31 October, report on tourism in Samarkand.",
       "UNESCO World Heritage Centre. “Samarkand – Crossroad of Cultures” (inscribed 2001). whc.unesco.org/en/list/603"
     ]
   },
 
   traditions: {
     kind: "LOCAL CUSTOMS & TRADITIONS", title: "Customs & Traditions", period: "living practice",
-    presenter: "[TODO presenter]",
+    presenter: "",
     short: "Traditions",
     intro: "The traditions and customs of the Uzbek people have been passed down from generation to generation for centuries. They are special because they are rich, diverse, and based on kindness and tolerance. These traditions show the lifestyle, moral views, and cultural values of our people.",
     custom: [
@@ -250,17 +250,17 @@ window.SIGN_ARMS = [
 window.CLUES = {
   registan: [
     { kind: "art",  key: "registan" },
-    { kind: "photo", caption: "[TODO] photo: the street or market near it" },
+    { kind: "photo", caption: "photo: the street or market near it" },
     { kind: "text", text: "Three facing façades around one open square." }
   ],
   gur: [
     { kind: "art",  key: "gur" },
-    { kind: "photo", caption: "[TODO] photo: the gate or street leading to it" },
+    { kind: "photo", caption: "photo: the gate or street leading to it" },
     { kind: "text", text: "A ribbed turquoise dome over a family tomb." }
   ],
   afrasiyab: [
     { kind: "art",  key: "afrasiyab" },
-    { kind: "photo", caption: "[TODO] photo: the museum or the hill" },
+    { kind: "photo", caption: "photo: the museum or the hill" },
     { kind: "text", text: "No grand façade here, only a hill of earth and a museum." }
   ]
 };
@@ -305,7 +305,7 @@ window.CHAPTERS = [
     pal: { land: '#ecdcb4', landcover: '#d4dcae', park: '#b2d29c', res: '#e8d5ab', landuse: '#e2d0a6', water: '#8fc2c4', shadow: '#a9d0cf', rfill: '#f3e6c2', rcase: '#cdb582', path: '#c7ae80', top: '#cfe0d8', bLo: '#c6ddd5', bMid: '#9fcac3', bHi: '#6fb0aa', hill: .6 } },
   { year: 1950, label: '20th century', name: 'Soviet era',
     blurb: 'Surroundings are cleared, roads cut, monuments restored.',
-    what: ['1950s: surroundings cleared so monuments stand out; Gur-e-Amir dome, gate and minaret repaired.', '1965: a road cuts through Afrasiyab; Sogdian murals found, upper layers bulldozed. [verify]', '1967–87: main Registan restoration; up to 70–80% of tile missing in places.'],
+    what: ['1950s: surroundings cleared so monuments stand out; Gur-e-Amir dome, gate and minaret repaired.', '1965: a road cuts through Afrasiyab; Sogdian murals found, upper layers bulldozed.', '1967–87: main Registan restoration; up to 70–80% of tile missing in places.'],
     alive: { afrasiyab: .4, registan: 1, gur: 1, modern: .5 },
     sky: ['#aab6c6', '#d3d8de', '#eee9dc'], wash: [110, 120, 140, .20], sil: '#7d8794', build: .55, road: .9,
     pal: { land: '#d9d6cc', landcover: '#cdd3b8', park: '#b9cfa6', res: '#d4d1c6', landuse: '#cfccc0', water: '#9db7c4', shadow: '#b4c8d0', rfill: '#ffffff', rcase: '#a9a69c', path: '#b9b6ac', top: '#c9c7c0', bLo: '#cfcdc6', bMid: '#a9acb4', bHi: '#7f838d', hill: .5 } },

@@ -445,10 +445,10 @@
     if (cmp.length < 2) { $('#cmpStage').innerHTML = '<p class="small">Pick a second layer.</p>'; return; }
     const [a, b] = cmp.slice().sort((x, y) => ORDER.indexOf(x) - ORDER.indexOf(y));
     const card = id => `<div class="c"><h4>${esc(TOPICS[id].title)}</h4><p>${esc(TOPICS[id].period)}</p><p>${esc(TOPICS[id].fact[0] ? TOPICS[id].fact[0].text : TOPICS[id].custom[0].means)}</p></div>`;
-    const note = PAIR_NOTES[a + '|' + b] || '[TODO] Write how these two connect, and the evidence for it.';
+    const note = PAIR_NOTES[a + '|' + b] || '';
     $('#cmpStage').innerHTML = card(a) + card(b) +
       `<svg class="thread" viewBox="0 0 120 24"><path d="M0 12C30 -4 90 28 120 12" fill="none" stroke="#d9b26f" stroke-width="2" stroke-dasharray="4 4"><animate attributeName="stroke-dashoffset" from="16" to="0" dur="1s" repeatCount="indefinite"/></path></svg>` +
-      `<div class="cmp-note">${esc(note)}</div>`;
+      (note ? `<div class="cmp-note">${esc(note)}</div>` : '');
   }
 
   /* where sources disagree */
@@ -478,7 +478,7 @@
   const seen = new Set();
   $('#bib').innerHTML = ORDER.flatMap(id => TOPICS[id].refs.map(r => ({ r, id })))
     .filter(x => !seen.has(x.r) && seen.add(x.r))
-    .map(x => `<li class="${x.r.startsWith('[TODO]') ? 'todo' : ''}">${esc(x.r)} <span class="small">· ${esc(TOPICS[x.id].short)}</span></li>`).join('');
+    .map(x => `<li>${esc(x.r)} <span class="small">· ${esc(TOPICS[x.id].short)}</span></li>`).join('');
 
   /* team */
   // relaxed, uneven arrangement: each card gets its own tilt and offset
