@@ -97,9 +97,7 @@ window.TOPICS = {
     connect: [
       { to: "afrasiyab", text: "The Registan was a public space of the later, southern city. Tashkent Street is a widened version of the old bazaar street linking Bibi-Khanym and the Registan." },
       { to: "afrasiyab", text: "Just as Afrasiyab was where Samarkand’s main site evolved, Registan served as a Silk Road exchange hub." },
-      { to: "modern",    text: "In the 1950s the surroundings were cleared so the monuments stood out from afar; the street later became a pedestrian zone. Ticketed entry, festivals, retail." },
-      { to: "modern",    text: "Modern architecture: it is inside the World Heritage zone, so new hotels and halls nearby must follow strict height and style rules. It marks the boundary between old and new Samarkand, and modern city planning has to fit this historic layer. The Registan shapes the modern city; new buildings must respect the heritage site." },
-      { to: "traditions", text: "Traditions: it no longer holds old classes or medieval markets. Now it hosts national festivals, music shows and light performances, and local craft workers sell Uzbek ceramics and textiles here. The old space carries modern local customs: the historic square keeps living traditions and gets new use from today’s local people." }
+      { to: "modern",    text: "In the 1950s the surroundings were cleared so the monuments stood out from afar; the street later became a pedestrian zone. Ticketed entry, festivals, retail." }
     ],
     refs: [
       "UNESCO World Heritage Centre. “Samarkand – Crossroad of Cultures.” whc.unesco.org/en/list/603",
@@ -270,7 +268,8 @@ window.CLOSING_QUESTION = "If the dome is new and the concrete is hidden, what a
 window.PAIR_NOTES = {
   "registan|afrasiyab": "Same centre of power, moved south. UNESCO reads the city in three zones: Afrasiyab (oldest), the Timurid city, the 19th–20th-century western extension.",
   "registan|gur": "Same Timurid-era city. Learning and public life on the Registan; family burial at Gur-e-Amir. Ulugh Beg links the two.",
-  "registan|modern": "From cleared surroundings (1950s) to pedestrian streets, tickets and festivals: the square is now also a visitor product.",
+  "registan|modern": "The Registan is inside the World Heritage zone, so new hotels and halls nearby must follow strict height and style rules. It marks the boundary between old and new Samarkand: modern city planning has to fit this historic layer, and new buildings must respect the heritage site. Since the 1950s the square has also become a visitor product: pedestrian streets, tickets, festivals.",
+  "registan|traditions": "The Registan no longer holds old classes or medieval markets. Today it hosts national festivals, music shows and light performances, and local craft workers sell Uzbek ceramics and textiles here. The old space carries modern local customs: the historic square keeps living traditions and gets new use from today’s local people.",
   "gur|modern": "Planned entrance plaza and visitor centre: a tomb redesigned for visitors.",
   "afrasiyab|modern": "A road cut through Afrasiyab in 1965; UNESCO asked about the same road in 2006 and 2008."
   /* Add more as "a|b": "text" — keys use the order registan, gur, afrasiyab, modern, traditions */
