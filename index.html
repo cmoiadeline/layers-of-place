@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Layers of Place — Samarkand</title>
+<!-- Everything the page needs is bundled locally: only the map tiles need the internet. -->
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="vendor/maplibre-gl.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ OPENING: DIG ============ -->
+<div id="intro" aria-label="Opening animation">
+  <div class="ground" id="ground"></div>
+  <div class="sky-line" id="skyLine"></div>
+  <div class="digger" id="digger" aria-hidden="true">
+    <svg viewBox="0 0 80 110" width="80" height="110">
+      <g id="shovelArm"><rect x="44" y="40" width="4" height="46" fill="#c9a36a"/><path d="M38 84h16l-3 14H41z" fill="#9aa4b5"/></g>
+      <rect x="26" y="30" width="26" height="40" rx="4" fill="#20263a"/>
+      <rect x="22" y="42" width="10" height="22" rx="3" fill="#d4693f"/>
+      <circle cx="39" cy="20" r="12" fill="#e8bf9c"/>
+      <path d="M26 18c0-9 7-14 13-14s13 5 13 14c-5-4-9-5-13-5s-8 1-13 5z" fill="#1a1a22"/>
+      <rect x="28" y="70" width="10" height="30" fill="#12141f"/><rect x="40" y="70" width="10" height="30" fill="#12141f"/>
+      <rect x="26" y="98" width="14" height="8" rx="3" fill="#f3efe6"/><rect x="40" y="98" width="14" height="8" rx="3" fill="#f3efe6"/>
+    </svg>
+  </div>
+  <div class="intro-text" id="introText">
+    <p>We are Layers of Place.</p>
+    <p>Let’s dig.</p>
+  </div>
+  <div class="counter" id="counter"><span id="counterYear">2026</span><small id="counterNote">Samarkand, the living city</small></div>
+  <button class="skip" id="skip">Skip ›</button>
+</div>
+
+<!-- ============ PAGES ============ -->
+<main id="pages">
+
+  <!-- ABOUT -->
+  <section class="page" id="page-about">
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="eyebrow">TEAM A · MS-126M</p>
+        <h1>Layers of Place.</h1>
+        <p class="lead">A place is not one moment. It is a stack of them.</p>
+        <p>Our question: <em>how do historic sites and the city around them reveal change over time?</em> We read Samarkand as three kinds of layer:</p>
+        <ul class="ways">
+          <li><b>Unearthed</b><span>Afrasiyab: the city before the city we see.</span></li>
+          <li><b>Preserved</b><span>Registan and Gur-e-Amir: monuments kept, restored and re-read.</span></li>
+          <li><b>Lived</b><span>Modern architecture and local customs: the layers still being made.</span></li>
+        </ul>
+        <p>UNESCO itself reads the city in three zones: Afrasiyab (oldest, north-east), the Timurid city (south) and the 19th–20th-century western extension. The centre of Samarkand kept moving, and every era reused, rebuilt and re-read what it inherited.</p>
+        <p class="small">We separate documented fact, our interpretation and open questions, and we say which is which.</p>
+        <a class="cta" href="#groupwork">Start the investigation →</a>
+      </div>
+      <div class="about-diagram" id="aboutDiagram"></div>
+    </div>
+  </section>
+
+  <!-- GROUPWORK -->
+  <section class="page" id="page-groupwork">
+    <!-- far scenery: sky, sun, clouds, mountains and a skyline that changes era -->
+    <div class="scenery" id="scenery">
+      <div class="sky s1"></div><div class="sky s2"></div><div class="sky s3"></div>
+      <div class="sun"></div>
+      <svg class="cloud c1" viewBox="0 0 200 60"><path d="M20 50a20 20 0 0 1 4-39 28 28 0 0 1 52-6 24 24 0 0 1 40 8 22 22 0 0 1 36 12 18 18 0 0 1-2 25z"/></svg>
+      <svg class="cloud c2" viewBox="0 0 200 60"><path d="M20 50a20 20 0 0 1 4-39 28 28 0 0 1 52-6 24 24 0 0 1 40 8 22 22 0 0 1 36 12 18 18 0 0 1-2 25z"/></svg>
+      <svg class="cloud c3" viewBox="0 0 200 60"><path d="M20 50a20 20 0 0 1 4-39 28 28 0 0 1 52-6 24 24 0 0 1 40 8 22 22 0 0 1 36 12 18 18 0 0 1-2 25z"/></svg>
+      <div class="far" id="far">
+        <svg class="m1" viewBox="0 0 1600 150" preserveAspectRatio="none"><path d="M0 150V92l80-26 70 20 90-58 80 44 70-30 110 52 90-36 80 34 100-66 70 40 120-24 90 46 110-62 90 48 100-30 90 40 70-22 90 42v66z"/></svg>
+        <svg class="m2" viewBox="0 0 1600 150" preserveAspectRatio="none"><path d="M0 150V118l120-30 90 26 110-40 100 36 130-22 90 34 120-48 100 40 110-18 120 30 100-26 110 28v66z"/></svg>
+      </div>
+    </div>
+    <div id="map"></div>
+    <div class="haze"></div>
+    <div class="eras front" id="eras"></div>
+    <div class="era-wash" id="eraWash"></div>
+    <aside class="chapter" id="chapter" aria-live="polite">
+      <p class="eyebrow" id="chNo"></p>
+      <div class="yr" id="chYear"></div>
+      <h3 id="chName"></h3>
+      <p class="blurb" id="chBlurb"></p>
+      <ul id="chWhat"></ul>
+      <p class="draft">Draft lines · check against your sources</p>
+    </aside>
+    <div class="chapters" id="chapters">
+      <button class="tplay" id="tplay">▶ Time-lapse</button>
+      <div class="chaps" id="chaps"></div>
+    </div>
+    <div class="gw-head">
+      <h2>Groupwork</h2>
+      <p>Three clue cards float over Samarkand. Which site lies beneath each one?</p>
+      <p class="progress"><b id="found">0</b> / 3 sites found</p>
+    </div>
+    <div class="frame-wrap" id="frameWrap">
+      <div class="rope r1"></div><div class="rope r2"></div>
+      <button class="frame" id="frameBtn" aria-label="Open Modern Architecture">
+        <svg viewBox="0 0 120 90" width="150" height="112">
+          <rect width="120" height="90" fill="#16213a"/>
+          <rect x="0" y="62" width="120" height="28" fill="#0d1526"/>
+          <path d="M18 62V34l16-10v38zM38 62V18l14 8v36zM56 62V30h22v32zM82 62V22l20 12v28z" fill="#6f86b6"/>
+          <path d="M38 18l14 8v36" fill="none" stroke="#c8d6f3" stroke-width="1"/>
+          <circle cx="98" cy="14" r="5" fill="#f1e7c9"/>
+        </svg>
+      </button>
+      <span class="frame-cap">Modern architecture</span>
+    </div>
+  </section>
+
+  <!-- FIELDNOTES -->
+  <section class="page scrolly" id="page-fieldnotes">
+    <div class="fn-wrap">
+      <p class="eyebrow">AFTER THE INVESTIGATION</p>
+      <h1>FieldNotes.</h1>
+
+      <div class="fn-block" id="fnCompare">
+        <h3><span>01</span> Compare two layers</h3>
+        <div class="chips" id="cmpChips"></div>
+        <div class="cmp-stage" id="cmpStage"></div>
+      </div>
+
+      <div class="fn-block">
+        <h3><span>02</span> Closing question</h3>
+        <p class="big-q" id="closingQ"></p>
+        <p class="small">There is no single correct answer. Say what evidence moves you.</p>
+      </div>
+
+      <div class="fn-block">
+        <h3><span>03</span> From the field</h3>
+        <p class="small">Photos taken by Team A on site, grouped into small stories. Drag the strip or the slider →</p>
+      </div>
+      <div class="gallery" id="gallery" tabindex="0" aria-label="Field photos"></div>
+      <input type="range" class="gal-slider" id="galSlider" min="0" max="100" value="0" step="0.1" aria-label="Scroll field photos">
+
+      <div class="fn-block">
+        <h3><span>04</span> Where our sources disagree</h3>
+        <div class="disputes" id="disputes"></div>
+      </div>
+
+      <div class="fn-block">
+        <h3><span>05</span> Bibliography</h3>
+        <ol class="bib" id="bib"></ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="page scrolly" id="page-team">
+    <div class="fn-wrap">
+      <p class="eyebrow">TEAM A</p>
+      <h1>Who dug.</h1>
+      <div class="team-grid" id="teamGrid"></div>
+      <p class="small">Listed in alphabetical order.</p>
+    </div>
+  </section>
+</main>
+
+<!-- ============ CLUE / GUESS MODAL ============ -->
+<div id="guess" class="overlay" hidden>
+  <div class="guess-card">
+    <button class="x" data-close>×</button>
+    <p class="eyebrow" id="guessTitle">CLUE</p>
+    <div class="clue-view" id="clueView"></div>
+    <p class="guess-msg" id="guessMsg">Which site is this?</p>
+    <div class="choices" id="choices"></div>
+  </div>
+</div>
+
+<!-- ============ INNER PAGE ============ -->
+<div id="inner" class="inner" hidden>
+  <div class="inner-sheet">
+    <button class="x" id="innerClose" aria-label="Close">×</button>
+    <header>
+      <p class="eyebrow" id="inKind"></p>
+      <h1 id="inTitle"></h1>
+      <p class="period" id="inPeriod"></p>
+      <p class="intro" id="inIntro" hidden></p>
+      <p class="legend"><span class="tag F">F</span> documented fact <span class="tag I">I</span> our interpretation <span class="tag Q">Q</span> open question</p>
+    </header>
+    <div class="strip" id="inImgs" hidden></div>
+    <div class="panels" id="inPanels"></div>
+    <footer>
+      <h4>References</h4>
+      <ol id="inRefs"></ol>
+    </footer>
+  </div>
+</div>
+
+<!-- ============ BOTTOM NAV ============ -->
+<nav id="nav">
+  <div class="skyline" id="skyline"></div>
+  <a href="#about" data-p="about">ABOUT</a>
+  <a href="#groupwork" data-p="groupwork">GROUPWORK</a>
+  <a href="#fieldnotes" data-p="fieldnotes">FIELDNOTES</a>
+  <a href="#team" data-p="team">TEAM</a>
+</nav>
+
+<script src="vendor/maplibre-gl.js"></script>
+<script src="js/data.js"></script>
+<script src="js/art.js"></script>
+<script src="js/intro.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
