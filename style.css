@@ -431,3 +431,10 @@ sup.ref{font-family:var(--mono);color:#8fa3c7;margin-left:3px;font-size:10px}
 .set-text b{display:block;font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--teal);margin-bottom:2px}
 .set-text .ask{font-family:var(--serif);font-size:19px;line-height:1.25;color:var(--ink);border-left:3px solid var(--gold);padding-left:12px}
 .set-text .ask b{color:var(--clay)}
+
+/* team groups */
+.team-grid{display:block}
+.team-group{margin:34px 0 6px;padding-top:14px;border-top:1px solid var(--line);font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal)}
+.team-group:first-child{margin-top:20px;border-top:0;padding-top:0}
+.team-row{display:flex;flex-wrap:wrap;gap:30px 34px;margin:14px 0 6px;align-items:flex-start}
+#page-team h1 + .small{margin-top:10px}

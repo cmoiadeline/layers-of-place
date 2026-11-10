@@ -483,8 +483,12 @@
   /* team */
   // relaxed, uneven arrangement: each card gets its own tilt and offset
   const tr = [-2.4, 1.6, -1, 2.2, -1.8, 1.1, -0.6], ty = [0, 26, 8, 34, 4, 22, 12];
-  $('#teamGrid').innerHTML = TEAM.slice().sort((x, y) => x.name.localeCompare(y.name)).map((m, i) =>
-    `<div class="m" style="--r:${tr[i % 7]}deg;--dy:${ty[i % 7]}px"><div class="avatar"><img src="img/team/${m.photo}.jpg" alt="${esc(m.name)}"></div><div><b>${esc(m.name.replace(/\s*\[TODO[^\]]*\]/, ''))}</b><span>${/^\[TODO/.test(m.role) ? '' : esc(m.role)}</span></div></div>`).join('');
+  const GROUPS = { 1: 'Presenting team', 2: 'Also part of Team A' };
+  const card = (m, i) => `<div class="m" style="--r:${tr[i % 7]}deg;--dy:${ty[i % 7]}px"><div class="avatar"><img src="img/team/${m.photo}.jpg" alt="${esc(m.name)}"></div><div><b>${esc(m.name)}</b><span>${/^\[TODO/.test(m.role) ? '' : esc(m.role)}</span></div></div>`;
+  $('#teamGrid').innerHTML = [1, 2].map(g => {
+    const list = TEAM.filter(m => m.group === g).sort((x, y) => x.name.localeCompare(y.name));
+    return list.length ? `<h3 class="team-group">${GROUPS[g]}</h3><div class="team-row">${list.map(card).join('')}</div>` : '';
+  }).join('');
 
   route();
 })();

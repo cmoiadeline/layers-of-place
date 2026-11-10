@@ -28,13 +28,14 @@ window.SITES = {
 window.SIGNPOST = { lngLat: [66.9811, 39.6614] };
 
 /* ---- People (from Group Task.docx, Team A) ---- */
+/* group 1 = Presenting team, group 2 = Also part of Team A; each group is shown alphabetically */
 window.TEAM = [
-  { name: "Pages Mark Thomas Frank Mathieu",   role: "", photo: "thomas" },
-  { name: "Ma Shanshan",                       role: "", photo: "mashanshan" },
-  { name: "Shahafas K A",                      role: "", photo: "sha" },
-  { name: "Udalova Polina Dmitriyevna",        role: "", photo: "polina" },
-  { name: "Deng Shuang",                       role: "", photo: "dengshuang" },
-  { name: "Eliboyeva Mashhura Otabek qizi",    role: "", photo: "mashkura" }
+  { name: "Pages Mark Thomas Frank Mathieu",   role: "", photo: "thomas", group: 1 },
+  { name: "Ma Shanshan",                       role: "", photo: "mashanshan", group: 1 },
+  { name: "Shahafas K A",                      role: "", photo: "sha", group: 1 },
+  { name: "Udalova Polina Dmitriyevna",        role: "", photo: "polina", group: 2 },
+  { name: "Deng Shuang",                       role: "", photo: "dengshuang", group: 1 },
+  { name: "Eliboyeva Mashhura Otabek qizi",    role: "", photo: "mashkura", group: 2 }
 ];
 
 /* Field photo sets shown in FieldNotes. All photos were taken by Team A members.
